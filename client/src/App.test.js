@@ -16,8 +16,8 @@ test('renders players component', () => {
   ReactDOM.unmountComponentAtNode(div);
 })
 
-test('renders players component', () => {
-  const { getByText } = rtl.render(<App />);
-  const displayElement = getByText(/name/i);
+test('renders players text', () => {
+  const { getByText } = rtl.render(<GetPlayers />);
+  const displayElement = getByText(container, /Name/i);
   expect(displayElement).toBeInTheDocument();
 })
